@@ -17,3 +17,11 @@ spec:
     service: false
   preserveJobs: false
   secret: neutron-secret
+  #tls:
+  #  api:
+  #    disabled: false
+  #    internal:
+  #      secretName: cert-internal-svc
+  #    public:
+  #      secretName: cert-public-svc
+  #  caBundleSecretName: combined-ca-bundle

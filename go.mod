@@ -85,6 +85,15 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
+replace ( //allow-merging
+	// pin to k8s 0.26.x for now
+	k8s.io/api => k8s.io/api v0.26.11
+	k8s.io/apimachinery => k8s.io/apimachinery v0.26.11
+	k8s.io/client-go => k8s.io/client-go v0.26.11
+	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20230327201221-f5883ff37f0c
+	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.14.7
+)
+
 // Bump golang.org/x/net to avoid Rapid Reset CVE
 replace golang.org/x/net => golang.org/x/net v0.19.0 //allow-merging
 
@@ -93,3 +102,5 @@ replace github.com/openstack-k8s-operators/neutron-operator/api => ./api
 // mschuppert: map to latest commit from release-4.13 tag
 // must consistent within modules and service operators
 replace github.com/openshift/api => github.com/openshift/api v0.0.0-20230414143018-3367bc7e6ac7 //allow-merging
+
+replace github.com/openstack-k8s-operators/lib-common/modules/common => github.com/deydra71/lib-common/modules/common v0.0.0-20231221132238-bb04f7477236
